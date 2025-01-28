@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapplication.ClientController" style="-fx-background-color: #f4f4f9; -fx-padding: 20;">
+   <children>
+      <VBox spacing="15.0" layoutX="20.0" layoutY="20.0" prefWidth="660.0" style="-fx-background-color: #ffffff; -fx-border-color: #d3d3d3; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 15;">
+         <Label text="Chat Application" style="-fx-font-size: 24; -fx-font-family: 'Segoe UI Semibold'; -fx-text-fill: #333;" alignment="CENTER" />
+
+         <TextArea fx:id="txtArea" editable="false" wrapText="true" prefHeight="250.0" style="-fx-background-color: #f9f9f9; -fx-border-color: #d3d3d3; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+         <HBox spacing="10.0" alignment="CENTER">
+            <TextField fx:id="txtMessage" promptText="Type your message..." style="-fx-background-color: #f9f9f9; -fx-border-color: #d3d3d3; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10; -fx-font-size: 14;" HBox.hgrow="ALWAYS" />
+
+            <Button text="Send" onAction="#btnSendOnAction" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-font-family: 'Segoe UI'; -fx-background-radius: 5; -fx-padding: 10;" />
+         </HBox>
+
+         <HBox spacing="15.0" alignment="CENTER_RIGHT">
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="150.0" style="-fx-border-color: #d3d3d3; -fx-border-radius: 5; -fx-background-color: #eaeaea; -fx-padding: 10;" />
+
+            <VBox spacing="10.0" alignment="CENTER">
+               <Button text="Choose File" onAction="#btnFileChooserOnAction" style="-fx-background-color: #007BFF; -fx-text-fill: white; -fx-font-size: 14; -fx-font-family: 'Segoe UI'; -fx-background-radius: 5; -fx-padding: 10;" />
+               <Button text="Choose Image" onAction="#btnImageChooserOnAction" style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-font-size: 14; -fx-font-family: 'Segoe UI'; -fx-background-radius: 5; -fx-padding: 10;" />
+            </VBox>
+         </HBox>
+      </VBox>
+   </children>
+</AnchorPane>
